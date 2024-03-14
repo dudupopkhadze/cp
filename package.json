@@ -22,6 +22,7 @@
   "homepage": "https://github.com/dudupopkhadze/cp#readme",
   "dependencies": {
     "@grpc/grpc-js": "^1.10.2",
-    "@grpc/proto-loader": "^0.7.10"
+    "@grpc/proto-loader": "^0.7.10",
+    "node-notifier": "^10.0.1"
   }
 }

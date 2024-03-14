@@ -1,4 +1,5 @@
 import grpc from "@grpc/grpc-js";
+import notifier from "node-notifier";
 import { getProtoFile } from "./protos.js";
 
 const packageDef = getProtoFile("hello");
@@ -9,6 +10,10 @@ const examplePackage = grpcObject.example;
 const server = new grpc.Server();
 server.addService(examplePackage.Greeter.service, {
   sayHello: (call, callback) => {
+    notifier.notify({
+      title: "Hello",
+      message: `Hey ${call.request.name}`,
+    });
     callback(null, { message: "Hey Blah Blah 2 " + call.request.name });
   },
 });
