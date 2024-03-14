@@ -9,7 +9,7 @@ const examplePackage = grpcObject.example;
 const server = new grpc.Server();
 server.addService(examplePackage.Greeter.service, {
   sayHello: (call, callback) => {
-    callback(null, { message: "Hey Blah Blah " + call.request.name });
+    callback(null, { message: "Hey Blah Blah 2 " + call.request.name });
   },
 });
 
