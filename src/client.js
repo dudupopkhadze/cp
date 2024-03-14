@@ -21,7 +21,7 @@ const client = new cpPackage.CP(
   grpc.credentials.createInsecure()
 );
 
-client.send({ name: message, host: hostname }, (error, response) => {
+client.send({ message, host: hostname }, (error, response) => {
   if (error) {
     console.error(error);
     process.exit(1);
