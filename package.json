@@ -1,0 +1,20 @@
+{
+  "name": "cp",
+  "version": "1.0.0",
+  "description": "Copy Paste",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dudupopkhadze/cp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dudupopkhadze/cp/issues"
+  },
+  "homepage": "https://github.com/dudupopkhadze/cp#readme"
+}
