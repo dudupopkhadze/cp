@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package cp;
+
+service CP {
+  rpc Send (SendRequest) returns (SendReply) {}
+}
+
+message SendRequest {
+  string message = 1;
+  string host = 2;
+}
+
+message SendReply {
+  string message = 1;
+}
