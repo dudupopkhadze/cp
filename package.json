@@ -2,8 +2,11 @@
   "name": "cp",
   "version": "1.0.0",
   "description": "Copy Paste",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "server": "node src/server.js",
+    "client": "node src/client.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/dudupopkhadze/cp/issues"
   },
-  "homepage": "https://github.com/dudupopkhadze/cp#readme"
+  "homepage": "https://github.com/dudupopkhadze/cp#readme",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.2",
+    "@grpc/proto-loader": "^0.7.10"
+  }
 }
