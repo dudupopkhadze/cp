@@ -14,7 +14,7 @@ server.addService(examplePackage.Greeter.service, {
     notifier.notify({
       title: "Message from: " + call.request.host,
       message: `Hey ${call.request.name}`,
-      time: 5000,
+      time: 10000,
       type: "info",
       sound: true,
     });

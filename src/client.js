@@ -23,6 +23,8 @@ const getMessage = () => {
     });
   });
 };
+const hostname = os.hostname();
+console.log(hostname);
 
 getMessage().then((message) => {
   ips.forEach((ip) => {
@@ -30,11 +32,8 @@ getMessage().then((message) => {
       `${ip}:40000`,
       grpc.credentials.createInsecure()
     );
-    client.sayHello(
-      { name: message, host: os.hostname() },
-      (error, response) => {
-        console.log(response.message);
-      }
-    );
+    client.sayHello({ name: message, host: hostname }, (error, response) => {
+      console.log(response.message);
+    });
   });
 });
