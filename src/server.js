@@ -29,7 +29,5 @@ server.addService(examplePackage.Greeter.service, {
 server.bindAsync(
   "0.0.0.0:40000",
   grpc.ServerCredentials.createInsecure(),
-  () => {
-    server.start();
-  }
+  (err) => console.log(err)
 );
