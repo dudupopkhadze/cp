@@ -18,6 +18,8 @@ server.addService(examplePackage.Greeter.service, {
       type: "info",
       sound: true,
     });
+
+    console.log(call.request);
     callback(null, {
       message: "Response from: " + os.hostname() + " " + call.request.name,
     });
